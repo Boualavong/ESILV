@@ -1,0 +1,211 @@
+
+body{
+	background-color: #424242;
+	color: white;
+}
+li {
+
+float:left;
+}
+
+a 
+{
+
+display: block;
+margin-left: auto;
+margin-right: auto;
+color: white;
+}
+
+h1
+{
+text-align: center;
+position:absolute;
+top:200px;
+left : 380px;
+}
+
+#header
+{
+background-image: url("header1.jpg");
+background-repeat: no-repeat;
+width:100%;
+height:100%;
+padding:0px;
+
+margin-left: auto;
+margin-right: auto;
+
+font-size : 20px;
+font-face="Copperplate Gothic Light";
+font-color="white";
+}
+
+#header1
+{
+background-image: url("NY.jpg");
+background-repeat: no-repeat;
+width:100%;
+height:100%;
+padding:0px;
+
+margin-left: auto;
+margin-right: auto;
+
+font-size : 20px;
+font-face="Copperplate Gothic Light";
+font-color="white";
+}
+
+
+.button-down {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+}
+
+.menu{
+position: absolute;
+bottom: 280px;
+left:500px;
+
+}
+
+.menu a{
+	font-size: 18px;
+	margin-right: 20px;
+}
+
+.menu a:hover{
+	color: black;
+}
+
+
+
+#reseaux
+{
+position: fixed;
+right:10px;
+top: 15px;
+}
+#menu
+{
+}
+
+#corps
+{
+}
+
+#article 
+{
+text-align: center;
+columns: 20em
+padding: 0px;
+	text-align: center;
+	border: 3px dashed #ccc; 
+}
+
+.left 
+{
+    width: 100px;
+    float: left;
+    width: 60%;
+}
+
+.right 
+{
+
+    width: 100px;	
+    margin-left: 60%;
+
+}
+
+.ligne{
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+.colonne{
+	display: inline-block;
+	width: 32%;
+	text-align: center;
+
+}
+
+.description{
+}
+
+.colonne img {
+	width: 150px;
+    border: 3px solid white;
+	cursor: pointer;
+}
+.photoGrande {
+	width : 500px;
+	height : 500px;
+	border: 5px solid white;
+}
+
+.title-photo{
+	display: none;
+}
+.description-photo{
+	display: none;
+}
+.invert img
+{
+        filter: invert(1);
+        -webkit-filter: invert(1);
+        -moz-filter: invert(1);
+        -o-filter: invert(1);
+        -ms-filter: invert(1);
+}
+.invert img:hover
+{
+        filter: invert(0);
+        -webkit-filter: invert(0);
+        -moz-filter: invert(0);
+        -o-filter: invert(0);
+        -ms-filter: invert(0);
+}
+
+.carousel {
+	position: relative;
+}
+.carousel-inner{
+	min-height: 630px;
+}
+
+.carousel-left {
+	position: absolute;
+	top: 50%;	
+	left: 8%;
+}
+
+.carousel-right {
+	position: absolute;
+	top: 50%;
+	right: 10%;
+}
+
+.carousel-inner .item {
+	display:none;
+}
+.carousel-inner .active {
+	display:block;
+	width: 80%;
+	padding-left: 10%;
+}
+
+/*
+ ********** boutons share *********
+*/
+
+.boutton-share img{
+	width: 20px;
+}
+
+.fleche-bas{
+	width: 50px;
+}

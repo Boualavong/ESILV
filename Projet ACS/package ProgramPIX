@@ -1,0 +1,191 @@
+package ProgramPIX
+        {
+            public class Program
+            {
+
+/*----couleurs ---
+public static final String ANSI_RESET = "\u001B[0m";
+public static final String ANSI_BLACK = "\u001B[30m";
+public static final String ANSI_RED = "\u001B[31m";
+public static final String ANSI_GREEN = "\u001B[32m";
+public static final String ANSI_YELLOW = "\u001B[33m";
+public static final String ANSI_BLUE = "\u001B[34m";
+public static final String ANSI_PURPLE = "\u001B[35m";
+public static final String ANSI_CYAN = "\u001B[36m";
+public static final String ANSI_WHITE = "\u001B[37m";
+*/
+
+                static void endFunction()
+                //#region finFct
+                {
+                    // Console.ForegroundColor = ConsoleColor.Cyan;
+                    System.out.println(" ");
+                    System.out.println ("Appuyez sur entrer pour continuer");
+                    System.out.println();
+                    // Console.ResetColor();
+                }
+                //#endregion
+
+                public static Boolean ACTIVATE(string _activeS)
+                // #region fonction1
+                {
+                    boolean activation = false;
+                    if (_activeS == "1")
+                    { activation = true;
+                        System.out.println("Le système est actif.");
+                    }
+                    else
+                    { activation = false;
+                        System.out.println("Le système est désactivé.");
+                    }
+                    return activation;
+                }
+                //#endregion
+
+                static public void DisplayMenu()
+                //#region menuDisplay
+                {
+                    System.out.println("┌──────────────────────┐");
+                    System.out.println("│                ►  MENU  ◄              │");
+                    System.out.println("│         Que voulez vous faire ?         │");
+                    System.out.println("│          Entrez votre valeur :          │");
+                    System.out.println("├──────────────────────┤");
+                    System.out.println("│ [1] Activer / Désactiver votre système  │");
+                    System.out.println("│ [2] Afficher les dernières alertes      │");
+                    System.out.println("│ [3] Modifier le temps d'enregistrement  │");
+                    System.out.println("│ [4] Parametrer vos rappels              │");
+                    System.out.println("│ [5] Afficher l'évolution des poids      │");
+                    System.out.println("├──────────────────────┤");
+                    System.out.println("│         Pour quitter, entrez 0.         │");
+                    System.out.println("└──────────────────────┘");
+                    System.out.println("> ");
+                }
+                // #endregion
+
+                static public void Main(string[] args)
+                {
+                    //  #region variables
+                    int EnterKey = 0;
+                    boolean activation = false;
+                    int dureeRecord = 0;
+                    boolean rappelActivity = false;
+                    int dureeRappel = 0;
+                    //  #endregion
+
+        do
+
+        {
+            DisplayMenu();
+            EnterKey = Integer.valueOf(cnsl.readLine());
+            //Console.ForegroundColor = ConsoleColor.Green;
+
+            switch (EnterKey) {
+                case 1: //activation
+                    System.out.print("Activer / Désactiver votre système :");
+                    System.out.print("Entrez 1 pour activer le système, 0 pour le désactiver");
+                    //String _activeS = Console.ReadLine();
+                    String _activeS = cnsl.readLine();
+                    //activation = ACTIVATE(_activeS);
+                    //Console.ForegroundColor = ConsoleColor.Green;
+                    //Console.WriteLine(activation);
+                    //Console.ResetColor();
+                    endFunction();
+                    break;
+
+                case 2:
+                    System.out.print("Afficher les dernières alertes :");
+                    Integer nbrRecord = 5;
+                    Integer RecordNumber = 0;
+                    String[] RecordTab = new String[nbrRecord];
+                    RecordTab[0] = "donne DATE record DUREE autres données...";
+                    RecordTab[1] = "faire une boucle pour augm nbrRecord à chaque record";
+                    RecordTab[2] = "faire un string avec toutes les données a la fin de chaque enregistrement";
+                    RecordTab[3] = "affecter ce string à RecordTab[nbrRecord]";
+                    for(String record : RecordTab)
+                {
+                    System.out.print(RecordNumber + " - ");
+                    System.out.print(record);
+                    RecordNumber++;
+                }
+                //Console.ForegroundColor = ConsoleColor.Green;
+                //Console.ResetColor();
+                endFunction();
+                break;
+
+                case 3:
+                    System.out.print("Modifier le temps d'enregistrement :");
+                    System.out.print("Votre durée d'enregistrement est actuellement de " + dureeRecord + " secondes.");
+                    System.out.print("Si vous souhaitez la changer, tapez 1, sinon 0");
+                    Integer choixCas3 = Integer.valueOf(cnsl.readLine());
+                    if (choixCas3 == 1) {
+                        System.out.print("Entrez votre nouvelle durée (en secondes)");
+                        dureeRecord = Integer.valueOf(cnsl.readLine());
+                    }
+                    System.out.print("Votre durée d'enregistrement est à présent de " + dureeRecord + " secondes.");
+                    //Console.ForegroundColor = ConsoleColor.Green;
+                    //Console.ResetColor();
+                    endFunction();
+                    break;
+
+                case 4:
+                    System.out.print("Parametrez vos rappels :");
+                    System.out.print("Votre système de rappel est actuellement ");
+                    if (rappelActivity == false)
+                        System.out.print(" OFF.");
+                    else {
+                        System.out.print(" ON.");
+                    }
+
+                    System.out.print("Si vous souhaitez la changer, tapez 1, sinon 0");
+                    int choixCas41 = Integer.valueOf(cnsl.readLine());
+                    if (choixCas41 == 1) {
+                        System.out.print("Entrez 1 pour activer les rappels, 0 sinon");
+                        int choixCas42 = Integer.valueOf(cnsl.readLine());
+                        if (choixCas42 == 1)
+                            rappelActivity = true;
+                        else {
+                            rappelActivity = false;
+                            break;
+                        }
+                        System.out.print("Toutes les combien d'heures souhaitez vous recevoir un rappel lors que votre système est désactivé ?");
+                        dureeRappel = Integer.valueOf(cnsl.readLine());
+                        System.out.print("Vous serez rappelez de la désactivation de votre système toutes les " + dureeRappel + " heures.");
+                        //string _activeSR = Console.ReadLine();
+                    }
+                    //Console.ForegroundColor = ConsoleColor.Green;
+                    //Console.WriteLine(rappelActivity);
+                    //Console.ResetColor();
+                    endFunction();
+                    break;
+
+                case 5:
+                    System.out.print("Afficher l'évolution des poids :");
+                    Integer nbrPesee = 0;
+                    Float[] PoidsTab = new Float[nbrPesee];
+
+                    System.out.print("On va tracer à l'aide d'une boucle un graphique de l'évolution des poids..");
+                    System.out.print("Il faudra donc lors d'une pesée stocker en mémoire la date de celle ci pour notre tracer");
+
+                    //Console.ForegroundColor = ConsoleColor.Green;
+                    //Console.ResetColor();
+                    endFunction();
+                    break;
+
+                case 0:
+                    break;
+                default:
+                    System.out.print("Erreur");
+                    break;
+            }
+            //Console.ResetColor();
+        }
+        while(EnterKey!=0);
+    }
+
+      //            Console.BackgroundColor = ConsoleColor.Red;
+      //           Console.ForegroundColor = ConsoleColor.Black;
+      System.out.println("A bientot");
+      System.out.println();
+      }
+   }
+ }
