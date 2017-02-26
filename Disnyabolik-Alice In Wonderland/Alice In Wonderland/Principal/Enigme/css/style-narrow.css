@@ -1,0 +1,37 @@
+body, input, select, textarea {
+		font-size: 13pt;
+		letter-spacing: 0.025em;
+		line-height: 1.5em;
+	}
+
+	header br {
+		display: none;
+	}
+
+	header.major {
+		padding-bottom: 1em;
+	}
+
+	header.special {
+		padding-left: 2.5em;
+		padding-right: 2.5em;
+	}
+
+	footer.major {
+		padding-top: 1.5em;
+	}
+
+
+/* Banner */
+
+	#banner {
+		background-size: 15em, 15em, auto, cover;
+	}
+
+
+/* CTA */
+
+	#cta {
+		background-size: 15em, 15em, auto, cover;
+		padding: 3em;
+	}
